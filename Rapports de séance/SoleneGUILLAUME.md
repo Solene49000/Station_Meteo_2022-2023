@@ -1,15 +1,21 @@
 CAHIER DE SUIVI - SOLENE GUILLAUME
 ==
-SEANCE I (01 Sept): Présentation du projet
+SEANCE I - 01 Sept : Présentation du projet
 -
 Lots de cette séance, nous avons recu des explications sur le projet Ruche connectée. <br/> 
 
 ### Ruche connectée #
 
 INSERER IMAGE SCHEMA RUCHE CONNECTEE
+La ruche connectée est divisé en plusieurs projets différents. <br/>Notre promo prend la suite de ce qui est existant.
+ENUMERER CE QUI EXISTE
+<br/> Trois grosses parties sont à créer ou bien à continuer.
+- La station météo (à continuer)
+- Lutte contre les parasites
+- Communication GSM et WiFi
 
-Nous nous occuperons de la partie Station météo déjà entamée. <br/>
-
+Nous nous occuperons de la partie station météo. <br/> 
+Il nous faudra pour ceci créer une interface utilisateur affichant les données météorologiques captées. <br/>
 
 ### Matériel à disposition #
 - Pluviomètre
