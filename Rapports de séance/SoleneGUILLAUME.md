@@ -1,15 +1,31 @@
 CAHIER DE SUIVI - SOLENE GUILLAUME
 ==
-SEANCE I : Présentation du projet
+SEANCE I (01 Sept): Présentation du projet
 -
-### Title 3 #
-####  Title 4
-*** Export HTML ***
-*******************
+Lots de cette séance, nous avons recu des explications sur le projet Ruche connectée. <br/> 
 
-<h1>Title 1</h1>
-<h2>Title 2</h2>
-<h3>Title 3</h3>
-<h4>Title 4</h4>
+### Ruche connectée #
 
-<p>a paragraph blabla <br/>Troisième ligne</p>
+INSERER IMAGE SCHEMA RUCHE CONNECTEE
+
+Nous nous occuperons de la partie Station météo déjà entamée. <br/>
+
+
+### Matériel à disposition #
+- Pluviomètre
+- Anémomètre
+- Capteur de direction du vent
+- Capteur de luminosité (TSL2591)
+- Capteur de température, d'hydrométrie et de pression atmosphérique (BME/BMP280)
+- Microcontroleur ESP ??? 
+
+### Avancées #
+
+- Présentation du projet
+- Choix du sujet
+- Prise en main de Github
+- Création du Repository sur Github
+- Organisation du Repository
+- Ajout des documents et liens utiles dans le repository
+- Creation du fichier de cahier de suivi
+- Prise en main du langage markdown 
