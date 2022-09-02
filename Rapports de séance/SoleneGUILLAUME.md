@@ -20,10 +20,10 @@ Il nous faudra pour ceci créer une interface utilisateur affichant les données
 ### Matériel à disposition #
 - Pluviomètre
 - Anémomètre
-- Capteur de direction du vent
+- Girouette
 - Capteur de luminosité (TSL2591)
 - Capteur de température, d'hydrométrie et de pression atmosphérique (BME/BMP280)
-- Microcontroleur ESP ??? 
+- Microcontroleur ESP32 
 
 ### Avancées #
 
@@ -35,3 +35,9 @@ Il nous faudra pour ceci créer une interface utilisateur affichant les données
 - Ajout des documents et liens utiles dans le repository
 - Creation du fichier de cahier de suivi
 - Prise en main du langage markdown 
+
+SEANCE II - 02 Sept : Recupération des fichiers
+-
+- Recupération du schéma et du PCB 
+  - Pluviomètre = connecteur gauche et girouette = connecteur droit 
+- Recupération du GitHub de l'année dernière 
