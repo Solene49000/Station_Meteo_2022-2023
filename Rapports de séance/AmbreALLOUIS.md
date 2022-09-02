@@ -23,3 +23,13 @@ Séance du 01/09
 
 Séance du 02/09
 -
+
+- Récupération du schéma de la carte et du tableau.
+- Lecture des rapports de l'année précédente
+- Lecture des codes récupérés de l'année précédente : Les codes fournis ne sont pas bons, il manque la version finale.
+- Installation et configuration d'Arduino :
+  - Installation des librairies ESP32 et LoRa.
+  - Analyse et compilation du code fourni
+  - Choix du Port COM3
+  - Outils : Carte ESP32 Dev
+  - Création d'un code permettant de faire clignoter les deux led (LED_R et LED_G) pour vérifier l'accès à la carte.  
