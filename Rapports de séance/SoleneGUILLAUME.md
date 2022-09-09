@@ -50,4 +50,10 @@ SEANCE II - 02 Sept : Recupération des fichiers
 
 SEANCE III - 09 Sept : Commencement du code du pluviomètre
 -
-
+- Recompilation du code des Leds sur Arduino
+- Separation des taches
+  - Ambre : Pluviomètre et Anémomètre
+  - Solène : Girouette  
+- Lien pour infos du materiel https://www.lextronic.fr/anemometre-pluviometre-girouette-compatible-arduino-microbit-grove-63661.html
+- Lien pour code Arduino sur le matériel : http://atelier-meteo-arduino-lycee-vincendo.blogspot.com/p/le-pluviometre.html
+- La Girouette donne 16 valeurs selon la direction d'où vient le vent
