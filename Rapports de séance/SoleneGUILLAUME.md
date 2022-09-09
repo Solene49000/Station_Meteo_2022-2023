@@ -38,21 +38,16 @@ Il nous faudra pour ceci créer une interface utilisateur affichant les données
 
 SEANCE II - 02 Sept : Recupération des fichiers
 -
--  Récupération du schéma de la carte et du tableau.
-- Lecture des rapports de l'année précédente
-- Lecture des codes récupérés de l'année précédente : Les codes fournis ne sont pas bons, il manque la version finale.
-- Installation et configuration d'Arduino :
-  - Installation des librairies ESP32 et LoRa.
-  - Analyse et compilation du code fourni
-  - Choix du Port COM3
-  - Outils : Carte ESP32 Dev
-  - Création d'un code permettant de faire clignoter les deux led (LED_R et LED_G) pour vérifier l'accès à la carte.
- 
+
 - Recupération du schéma et du PCB 
   - Pluviomètre = connecteur gauche et girouette = connecteur droit
 - Recupération du GitHub de l'année dernière
-  - Sur Arduino : installation des libraires ESP32 et LoRa
-  - Outils : Carte ESP32 Dev et Port COM3
+  - Lecture des documents 
+- Sur Arduino : installation des libraires ESP32 et LoRa
+- Outils : Carte ESP32 Dev et Port COM3
 - Test des codes donnés l'année dernière : ne fonctionnent pas
 - Creation d'un code pour tester compilation et bon fonctionnement de la carte : les leds s'allument
+
+SEANCE III - 09 Sept : Commencement du code du pluviomètre
+-
 
