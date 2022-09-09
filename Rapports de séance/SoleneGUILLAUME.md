@@ -57,3 +57,10 @@ SEANCE III - 09 Sept : Commencement du code du pluviomètre
 - Lien pour infos du materiel https://www.lextronic.fr/anemometre-pluviometre-girouette-compatible-arduino-microbit-grove-63661.html
 - Lien pour code Arduino sur le matériel : http://atelier-meteo-arduino-lycee-vincendo.blogspot.com/p/le-pluviometre.html
 - La Girouette donne 16 valeurs selon la direction d'où vient le vent
+  - Impossible de téléverser le code
+  - L'année dernière, les eleves ont fait un pont diviseur de tension. En le testant, il est apparu que les mesures de tension prises n'ont pas satisfait car trop proches. 
+  - A la place, Monsieur Peter nous a conseillé de renmplacer la résistance principale par un générateur de courant.
+  - Les prochaines séances, nous allons nous concentrer sur les autres appareils.
+ - Concernant le pluviomètre et l'anémomètre :
+  -   l'interrupeur fait des rebonds. Il faut pour ceci faire en sorte dans notre code de ne pas prendre en compte ces faux rebonds pour ne pas fausser la mesure.
+- 
