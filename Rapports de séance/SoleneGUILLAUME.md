@@ -63,4 +63,11 @@ SEANCE III - 09 Sept : Commencement du code du pluviomètre
   - Les prochaines séances, nous allons nous concentrer sur les autres appareils.
  - Concernant le pluviomètre et l'anémomètre :
   -   l'interrupeur fait des rebonds. Il faut pour ceci faire en sorte dans notre code de ne pas prendre en compte ces faux rebonds pour ne pas fausser la mesure.
-- 
+
+SEANCE IV - 15 Sept : Pluviomètre
+-
+- Probleme sur pluviomètre : Ne detectait pas les fronts montants
+  - Avec l'aide de M. Peter, de l'oscilloscope et du schéma, nous avons compris que V+ n'etait pas assez alimenté
+  - Ceci car des transistors étaient bloqués. Il faut les rendre passants. Sur arduino : mettre la pin MEASURE à HIGH
+  - Maintenant V+ est alimenté et les transitions 0 --> 1 franches. Le code marche et nous arrivons à avoir un compte des clics.
+  
