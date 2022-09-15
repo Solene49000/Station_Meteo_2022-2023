@@ -49,3 +49,5 @@ Séance du 15/09
 - Pluviometre, utilisation de la commande attachInterrupt() utilisation de la fonctionnalité FALLING permettant la dettection des fronts descendants
 - cette fonction permet d'incrémenter une variable et de retourner chaque changement d'état
 - le pluviometre est relie au port GIO 32, pour le fonctionnement initiale du pluviomêtre il reçoit V+. Pour notre cas, il est allimenté par VCC, donc pour obtenir la tension initiale, on pinMODE MEASURE à l'état 1 cette variable nous permet d'imposer le passage au niveau des transistor et ainsi de distribuer la bonne tension. Le transistor étant passant, le condo permet d'éviter l'é=effet de rebond. De plus lorsque la carte est débranchée puis rebranchée, le compteur  est incrémenté de 2.
+
+anemo : installation de la librairie esp32 timerInterrupt
