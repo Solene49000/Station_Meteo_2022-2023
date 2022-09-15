@@ -71,4 +71,4 @@ SEANCE IV - 15 Sept : Pluviomètre
   - Ceci car des transistors étaient bloqués. Il faut les rendre passants. Sur arduino : mettre la pin MEASURE à HIGH
   - Maintenant V+ est alimenté et les transitions 0 --> 1 franches. Le code marche et nous arrivons à avoir un compte des clics.
 - Grace à l'ajout l'année dernière d'un condensateur, nous n'avons plus de rebonds entre chaque incrémentation. Le compte est propre.
-  
+- Pour l'anemometre : nous arrivons compter les switchs. Il faut maintenant reflechir à un code viable pour compter les switchs : interruption de timer otutes les secondes
