@@ -72,3 +72,12 @@ SEANCE IV - 15 Sept : Pluviomètre
   - Maintenant V+ est alimenté et les transitions 0 --> 1 franches. Le code marche et nous arrivons à avoir un compte des clics.
 - Grace à l'ajout l'année dernière d'un condensateur, nous n'avons plus de rebonds entre chaque incrémentation. Le compte est propre.
 - Pour l'anemometre : nous arrivons compter les switchs. Il faut maintenant reflechir à un code viable pour compter les switchs : interruption de timer otutes les secondes
+
+SEANCE V - 3 oct : Anemomètre et Girouette
+-
+- Sur mon ordi : probleme avec le port COM3. Pendant le téléversement, un message d'erreur apparaît. IL faut mettre en loader pile au message "Connecting...."
+- Pour palier le probleme, essai de telecharger Arduino et de otut reinstaller sur ma VM linux : finalement inutile puisque probleme en partie résolu et impossible car pas assez d'espace de stockage sur la VM
+- Ambre a continué sur l'anémomètre
+- J'ai commencé sur la girouette :
+  - Il faut mettre le MEASURE à HIGH avant de declarer tout le reste dans la boucle set up (debug d'une heure)
+  - Je peux récupérer des valeurs de la girouette mais elle ne dépendent pas de la position de la girouette et se décrémentent de 255 à 0.  
