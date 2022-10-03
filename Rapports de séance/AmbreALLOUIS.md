@@ -4,7 +4,7 @@ Rapport de séance
 Présentation du projet
 -
 
-Séance du 01/09
+Séance du 01/09/2022
 -
 
 - Mise en place du projet Station Météo 2022-2023 :
@@ -21,7 +21,7 @@ Séance du 01/09
   - Capteur de température, d'hydrométrie, de pression atmosphérique
   - Abris météo
 
-Séance du 02/09
+Séance du 02/09/2022
 -
 
 - Récupération du schéma de la carte et du tableau.
@@ -34,7 +34,7 @@ Séance du 02/09
   - Outils : Carte ESP32 Dev
   - Création d'un code permettant de faire clignoter les deux led (LED_R et LED_G) pour vérifier l'accès à la carte.  
 
-Séance du 09/09
+Séance du 09/09/2022
 -
 
 - On a recompilé le code permettant de faire alterner la led verte et la led rouge
@@ -43,7 +43,7 @@ Séance du 09/09
 - Pour la girouette : retourne 16 valeurs en fonction de la direction du vent. Les élèves précédents ont utilisé un générateur de tension. Chaque sortie est associée à une tension particulière. Le problème de ce fonctionnement est lié à la tension fournit par la batterie qui oscille entre 3,1 et 3,6 V. cet intervalle cause la proximité des tensions entre chaque sortie et fausse les résultats.
 - M Peter nous a donc conseillé d’utiliser un générateur de courant car celui-ci n’est pas influencé par la différence de tension.
 
-Séance du 15/09
+Séance du 15/09/2022
 -
 
 - Pluviometre, utilisation de la commande attachInterrupt() utilisation de la fonctionnalité FALLING permettant la dettection des fronts descendants
@@ -51,3 +51,10 @@ Séance du 15/09
 - le pluviometre est relie au port GIO 32, pour le fonctionnement initiale du pluviomêtre il reçoit V+. Pour notre cas, il est allimenté par VCC, donc pour obtenir la tension initiale, on pinMODE MEASURE à l'état 1 cette variable nous permet d'imposer le passage au niveau des transistor et ainsi de distribuer la bonne tension. Le transistor étant passant, le condo permet d'éviter l'é=effet de rebond. De plus lorsque la carte est débranchée puis rebranchée, le compteur  est incrémenté de 2.
 
 anemo : installation de la librairie esp32 timerInterrupt
+
+Séance du 03/10/2022
+-
+
+- ajout bibliothèques
+- afficahge code et vitesse, le calcul de la dernière fois pas correct
+- codage en cours, utilisation de la nouvelle librairie
