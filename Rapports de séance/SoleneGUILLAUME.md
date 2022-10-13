@@ -87,4 +87,5 @@ SEANCE VI - 13 octobre : Anémomètre et Girouette
 - Lien github de station meteo : https://github.com/StationMeteoDIY
 - Girouette : un pont diviseur de tension ne convient pas car la tension est instable. Il nous faut alors un generateur de courant.
 - Nous choisissons le LM334DT que nous programmerons pour générer un courant de 0,01 mA (La resistance equivalente max etant de 120K)
-- 
+![image](generateur.png)
+
