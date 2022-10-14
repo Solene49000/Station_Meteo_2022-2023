@@ -55,6 +55,23 @@ anemo : installation de la librairie esp32 timerInterrupt
 Séance du 03/10/2022
 -
 
-- ajout bibliothèques
-- afficahge code et vitesse, le calcul de la dernière fois pas correct
-- codage en cours, utilisation de la nouvelle librairie
+Codage de la partie Anémomètre :
+- Recherche de bibliothèques timer associées à l'ESP32, nous ajoutons donc la bibliothèque ESP32TimerInterrupt
+- Sans l'utilisation de cette bibliothèque, nous arrivons à afficher le nombre de tours de l'anémomètre et la vitesse du vent. en fin de séance nous nous sommes rendu compte que le calcul n'est pas correcte.
+- Pour la réalisation de ce programme nous utilisaons la fonction delay. Le problème de cette fonction est que le programme est bloqué lors de sont activation. Donc cette fonction n'est pas compatible avec les autres codes.
+- Le codage de l'anemomètre est en cours avec l'utilisation de la nouvelle librairie
+
+Séance du 13/10/2022
+-
+
+- Utilisation de la bibliothèque ESP32TimerInterrupt :
+  Cette bibliothèque nous permet de creer une fonction permettant l'interruption d'un programme à un moment donné dans une ISR. Pour notre cas, celle ci nous permet de relever la vitesse du vent. Pour notre cas d'essai, nous avons decidé de récupérer la vitesse toutes les 30 secondes.
+  Pour la réalisation de cette fonction, nous avons utilisé les commandes suivantes :
+    - My_timer = timerBegin(0, 80, true); --> Cette commande initialise la variable My_timer avec un numéro de timer, une valeur de prescaler et le mode compteur (true) 
+    - timerAttachInterrupt(My_timer, &onTimer, true); --> Ici on fait appel à la fonction onTimer avec les paramètres de la variable My_timer
+    - timerAlarmWrite(My_timer, tempsTimer*1000000, true); --> Maintenant, nous deffinissons le temps entre chaque interuption. Cette valeur est en microsecondes. Pour faciliter les calculs qui suivent, nous avons décidé de créer une variable comprenant le temps d'attente en secondes. Pour avoir le temps en microsecondes, nous multiplions cette variable avec la puissance associée (10^6).
+    - timerAlarmEnable(My_timer); --> Activation de l'interruption
+--> Nous avons fait le choix d'utiliser une librairie afin de clarifier et simplifier notre code lorsque toutes les parties seront réunies.
+- Pour calculer la vitesse du vent, nous avons utilise=é le calcul suivant : vitesseVent = (PI * RAYON * 2 * tourAnemo)/tempsTimer*3.6 ;
+  Nous multiplions la circonférence de l'anemomètre par le nombre de tours et le divisons par le temps en secondes. Le résultat obtenu est en m/s, nos le multiplions donc par 3.6 pour avoir ce résultat en km/h. 
+- Le code de l'anémomètre est maintenant opérationnel et complet.
