@@ -89,3 +89,8 @@ SEANCE VI - 13 octobre : Anémomètre et Girouette
 - Nous choisissons le LM334DT que nous programmerons pour générer un courant de 0,01 mA (La resistance equivalente max etant de 120K)
 -![image](generateur.PNG)
 - Prochaine seance : faire le schema et souder sur la carte ? (ne pas oublier d'enlever la resistance du pont diviseur de tension originel)
+
+SEANCE VII - 28 Octobre : Girouette (Générateur de courant) et BME280
+-
+- Schéma et board Eagle du petit module générateur de courant finis. PCB usiné pour la semaine prochaine.
+- Commencé le code du BME280. Mais n'arrive pas à le compiler (Problème de librairie ?)
