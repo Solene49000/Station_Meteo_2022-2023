@@ -75,3 +75,8 @@ Séance du 13/10/2022
 - Pour calculer la vitesse du vent, nous avons utilise=é le calcul suivant : vitesseVent = (PI * RAYON * 2 * tourAnemo)/tempsTimer*3.6 ;
   Nous multiplions la circonférence de l'anemomètre par le nombre de tours et le divisons par le temps en secondes. Le résultat obtenu est en m/s, nos le multiplions donc par 3.6 pour avoir ce résultat en km/h. 
 - Le code de l'anémomètre est maintenant opérationnel et complet.
+
+
+
+- installation de la librairie TSL2591 library
+- installation de la librairie bluedot BME280 TSL2591
