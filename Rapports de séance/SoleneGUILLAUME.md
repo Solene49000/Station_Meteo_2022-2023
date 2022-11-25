@@ -94,3 +94,10 @@ SEANCE VII - 28 Octobre : Girouette (Générateur de courant) et BME280
 -
 - Schéma et board Eagle du petit module générateur de courant finis. PCB usiné pour la semaine prochaine.
 - Commencé le code du BME280. Mais n'arrive pas à le compiler (Problème de librairie ?)
+
+SEANCE VII - 25 Novembre : Girouette
+-
+- Module générateur de courant testé. Valeurs de tension stockées dans un excel
+- Module soudé sur le board principal
+- Test du module : des valeurs autres que celles de la tension sortent sur la console. Nous en avons 16, stockées sur un tableau excel
+- Pour la prochaine fois : finir le code (indiquer la direction de la girouette pour chaque valeur)
