@@ -107,8 +107,8 @@ SEANCE X - 01 Décembre : Makefile
 - Girouette fonctionnelle et envoie les données désirées.
 - Installation de la commande make sur Windows. Voici la procédure : 
  - Ouvrir le terminal de commande en administrateur 
- - Installer chocolatey en saisissant la commande suivante : @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+ - Installer chocolatey en saisissant la commande suivante : `@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
  - Fermer et rouvrir le terminal de commande en administrateur
- - Installer la commande make en saisissant : """choco install make"""
+ - Installer la commande make en saisissant : `choco install make`
  - Fermer et rouvrir l'invite de commande avant de faire un make
   
