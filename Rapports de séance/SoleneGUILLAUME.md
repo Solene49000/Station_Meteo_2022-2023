@@ -111,4 +111,7 @@ SEANCE X - 01 Décembre : Makefile
   - Fermer et rouvrir le terminal de commande en administrateur
   - Installer la commande make en saisissant : `choco install make`
   - Fermer et rouvrir l'invite de commande avant de faire un make
+ - Finalement tout ceci inutile car pas besoin d'un makefile sur arduino : https://arduino.stackexchange.com/questions/60656/split-up-arduino-code-into-multiple-files-using-arduino-ide#:~:text=There%20is%20no%20need%20to%20use%20an%20%23include,the%20rest%20of%20the.ino%20files%20in%20alphabetical%20order.
+ - Code d'Ambre pour luminosité, pression, température et humidité foncionnel -> besoin d'installer la librairie BME 280 sur mon PC
+ - 
   
