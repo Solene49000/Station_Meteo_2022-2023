@@ -95,9 +95,20 @@ SEANCE VII - 28 Octobre : Girouette (Générateur de courant) et BME280
 - Schéma et board Eagle du petit module générateur de courant finis. PCB usiné pour la semaine prochaine.
 - Commencé le code du BME280. Mais n'arrive pas à le compiler (Problème de librairie ?)
 
-SEANCE VII - 25 Novembre : Girouette
+SEANCE VIII - 25 Novembre : Girouette
 -
 - Module générateur de courant testé. Valeurs de tension stockées dans un excel
 - Module soudé sur le board principal
 - Test du module : des valeurs autres que celles de la tension sortent sur la console. Nous en avons 16, stockées sur un tableau excel
 - Pour la prochaine fois : finir le code (indiquer la direction de la girouette pour chaque valeur)
+
+SEANCE X - 01 Décembre : Makefile
+-
+- Girouette fonctionnelle et envoie les données désirées.
+- Installation de la commande make sur Windows. Voici la procédure : 
+- - Ouvrir le terminal de commande en administrateur 
+- - Installer chocolatey en saisissant la commande suivante : <@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin">
+- - Fermer et rouvrir le terminal de commande en administrateur
+- - Installer la commande make en saisissant : <choco install make>
+- - Fermer et rouvrir l'invite de commande avant de faire un make
+  
