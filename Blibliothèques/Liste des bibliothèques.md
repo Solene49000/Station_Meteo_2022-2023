@@ -12,3 +12,5 @@
 | Adafruit_I2CRegister.h    | test_lux.ino   | Adafruit BusIO                      |
 | Adafruit_SPIDevice.h      | test_lux.ino   | Adafruit BusIO                      |
 
+La bibliothèque : Adafruit Unified Sensor n'est pas présente sur Arduino. Il faut inclure le répertoire ZIP : dans les librairies Arduino.
+
