@@ -76,7 +76,30 @@ Séance du 13/10/2022
   Nous multiplions la circonférence de l'anemomètre par le nombre de tours et le divisons par le temps en secondes. Le résultat obtenu est en m/s, nos le multiplions donc par 3.6 pour avoir ce résultat en km/h. 
 - Le code de l'anémomètre est maintenant opérationnel et complet.
 
-
+Séance du 28/10/2022
+-
 
 - installation de la librairie TSL2591 library
 - installation de la librairie bluedot BME280 TSL2591
+- Librairies BME hors de Arduino, recherche et téléchargement des dossiers nécéssaires
+
+Séance du 18/11/2022
+-
+
+- Réalisation du code capteur de lumière
+
+Séance du 25/11/2022
+-
+
+- Récupération du code de l'équipe de l'année dernière
+- Installation de la librairie Adafruit
+- Le code de l'année passé ne fonctionne pas, les valeurs globales : temperature, pression et humidite restent à 0. 
+
+Séance du 01/12/2022
+-
+
+- Réalisation du code capteur de lumière et capteur de pression, humidité et température
+- Installation des librairies :
+  - Adafruit
+  - ESP32 Time Interrupt
+- Création du répertoire bibliothèques. Ce repertoire contient, un fichier texte avec la liste de toutes les bibliothèques installées et les fonctions qui les utilisent et les répertoires ".zip" à inclurent dans arduino.
