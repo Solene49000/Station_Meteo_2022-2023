@@ -118,4 +118,7 @@ SEANCE XI - 09 Décembre : Makefile
 -
 - "Makefile" terminé
   - Actualisation des valeurs toutes les 10 secondes
+- Compilation très longue
+  - Intallation d'Arduino sur VM linux : Compilation très rapide mais pas moyen d'utiliser une board ESP32 sur l'IDE :-(
+- Prochaine séance : Mettre en forme les données pour les envoyer via LoRa 
 
