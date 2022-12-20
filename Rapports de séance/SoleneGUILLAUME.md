@@ -122,3 +122,5 @@ SEANCE XI - 09 Décembre : Makefile
   - Intallation d'Arduino sur VM linux : Compilation très rapide mais pas moyen d'utiliser une board ESP32 sur l'IDE :-(
 - Prochaine séance : Mettre en forme les données pour les envoyer via LoRa 
 
+SEANCE XII - 20 Décembre : LoRa
+-
