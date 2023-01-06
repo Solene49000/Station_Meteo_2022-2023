@@ -30,22 +30,24 @@ Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591);
 
 //VARIABLES GLOBALES
 #define RAYON 0.07 // rayon de l'anemometre de 7 cm
-#define B1000000 64
-#define B110 6
+//#define B1000000 64
+//#define B110 6
 int compt=0 ;
 float quantiteEau = 0;
-unsigned long startTime_p;  
-unsigned long currentTime_p;
-const unsigned long period_p = 10000;
+unsigned long startTime_P;  
+unsigned long currentTime_P;
+const unsigned long period_P = 10000;
+
 float temperature = 0.0;
 float pression = 0.0;
 float humidite = 0.0;
-float luminosite = 0.0;   
-unsigned long delayTime;
+float luminosite = 0.0;
 float vitesseVent;
+
 int tourAnemo=0 ;
 unsigned long startTime_A;  
 unsigned long currentTime_A;
+unsigned long delayTime;
 const unsigned long period_A = 10000;
 
 void setup() {
@@ -69,7 +71,7 @@ void setup() {
   attachInterrupt(PLUVIOMETRE,comptage,FALLING);
   attachInterrupt(ANEMOMETRE,comptageAnemo,FALLING) ; 
   //Variable definition
-  startTime_p = millis();
+  startTime_P = millis();
   
 }
 
@@ -81,7 +83,7 @@ void loop() {
   delay(100);
   girouette();
   //Toutes les secondes
-  currentTime_p = millis();
+  currentTime_P = millis();
   if (currentTime_P - startTime_P >= period_P)//test whether the period has elapsed
   {
     //Pluviomètre
@@ -93,6 +95,6 @@ void loop() {
     //Anemometre
     Anemo();
     //Remise à 0 du compteur temporel
-    startTime_p = currentTime_p;
+    startTime_P = currentTime_P;
   }
 }
