@@ -20,8 +20,7 @@ void setup() {
 }
 
 void debug_trame(){ //Fonction de debug de la trame
-  
-  //Trame forme : I|macAdresse|pluvioanemometre|anemometre|girouette|donneestsl|donneesbme|checkbytes
+   //Trame forme : I|macAdresse|pluvioanemometre|anemometre|girouette|donneestsl|donneesbme|checkbytes
   
   build_trame(payload);
 

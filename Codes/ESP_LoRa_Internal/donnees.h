@@ -45,7 +45,7 @@ struct data_trame{
   //Serial.printf("mac : %02X:%02X:%02X:%02X:%02X:%02X \n",mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
 }
 
-uint8_t build_trame(uint8_t *payload){ //permet de fabriquer la trame
+void build_trame(uint8_t *payload){ //permet de fabriquer la trame
 
   ds.type = 'I';
   read_mac(ds.mac);
@@ -72,5 +72,5 @@ uint8_t build_trame(uint8_t *payload){ //permet de fabriquer la trame
   payload[11]= uint8_t(ds.donneesbme);
   payload[12] = uint8_t(ds.tensionbattery);
   payload[13]=uint8_t(ds.checkbytes);
-  Serial.println(String(payload[]13));
+  Serial.println(String(payload[13]));
 }
