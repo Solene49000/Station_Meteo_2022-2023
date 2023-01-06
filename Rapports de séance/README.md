@@ -23,11 +23,18 @@
 2- LES FICHIERS
 -
 - Station_Météo : Demande à des fréquences régulières la restitution des données des modules
-- Girouette : Renvoie la direction du vent entre 0 et ?? ( 0 = Nord, 1 = Nord Nord Ouest, ...)
+- Girouette : Renvoie la direction du vent entre 0 et 15 ( 0 = Nord, 1 = Nord Nord Ouest, ...)
 - Anémomètre : Renvoie la vitesse du vent jusquà 250 km/h (float)
 - Pluviomètre : Renvoie la quantité d'eau tombée en 10s
+- LuxHumTemp : 
+  - Renvoie la luminosité
+  - REnvoie l'humidité
+  - Renvoie la température
+- LoRa trame envoyée toutes les 10s
+- Structure trame : 
 
 
+BROUILLON
 struct datas_w { // 255 <=> error
   uint8_t macSTA[6];
   float   temp      = 225;        // -50 to +80 °C
