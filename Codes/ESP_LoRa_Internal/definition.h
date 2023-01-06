@@ -3,11 +3,11 @@
 /**************************************/
 
 //define the pins used by the LoRa transceiver module
-#define SCK 18 // 22
+#define SCK 18
 #define MISO 19
 #define MOSI 23
 
-#define SS 5 //ou 4
+#define SS 5
 #define RST 14
 #define DI0 26
 

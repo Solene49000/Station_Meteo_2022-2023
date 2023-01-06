@@ -1,5 +1,4 @@
 #include <LoRa.h>
-#include <SPI.h>
 
 struct LoRa_param_s {
   int  txPower = 15; // 2 to 17 dB limited to 15 because the UCA antenna = +2dB
@@ -13,14 +12,13 @@ struct LoRa_param_s {
   //uint8_t OCP; // Over Current Protection control (mA)
 } LoRa_param_1;
 
-long frequency_values[] = {863.2E6, 863.5E6, 863.8E6, 864.1E6, 864.4E6, 864.7E6, 865.2E6, 865.5E6, 865.8E6, 866.1E6, 866.4E6, 867.7E6, 867.0E6, 868.0E6, 868.1E6}; // Hz
+long frequency_values[] = {863.2E6, 863.5E6, 863.8E6, 864.1E6, 864.4E6, 864.7E6, 865.2E6, 865.5E6,
+                           865.8E6, 866.1E6, 866.4E6, 867.7E6, 867.0E6, 868.0E6, 868.1E6}; // Hz
                            
 long signalBandwidth_values[] = {62500, 125000, 250000, 500000}; // Hz
 
 
 void LoRa_start(struct LoRa_param_s  LR) {
-  Serial.print("1 - LoRa Frequency: ");
-  Serial.println(frequency_values[LR.frequency_id]);
   
   if (!LoRa.begin(frequency_values[LR.frequency_id])) {
     Serial.println("LoRa init failed. Check your connections.");
@@ -32,7 +30,7 @@ void LoRa_start(struct LoRa_param_s  LR) {
     #endif*/
   }
   
-  Serial.print("2 - LoRa Frequency: ");
+  Serial.print("LoRa Frequency: ");
   Serial.println(frequency_values[LR.frequency_id]);
     
   Serial.print("LoRa Spreading Factor: "); 

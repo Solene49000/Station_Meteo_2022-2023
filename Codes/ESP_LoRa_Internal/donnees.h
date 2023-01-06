@@ -49,18 +49,17 @@ void build_trame(uint8_t *payload){ //permet de fabriquer la trame
 
   ds.type = 'I';
   read_mac(ds.mac);
-  ds.pluviometre = 1;
-  ds.anemometre = 2;
-  ds.girouette = 3;
-  ds.donneestsl = 4;
-  ds.donneesbme = 5;
-  ds.tensionbattery = 6;
+  ds.pluviometre = static_cast<double>(1);
+  ds.anemometre = static_cast<double>(7.00);
+  ds.girouette = static_cast<double>(3.00);
+  ds.donneestsl = static_cast<double>(4.00);
+  ds.donneesbme = static_cast<double>(5.00);
+  ds.tensionbattery = static_cast<double>(6.00);
   ds.checkbytes = 0;
 
   Serial.printf("Trame before cast : %c | %X:%X:%X:%X:%X:%X | %f | %f | %f | %f| %f | %f | %d\n",ds.type,ds.mac[0],ds.mac[1],ds.mac[2],ds.mac[3],ds.mac[4],ds.mac[5],ds.mac[6],ds.pluviometre,ds.anemometre,ds.girouette,ds.donneestsl,ds.donneesbme,ds.tensionbattery,ds.checkbytes);
   
   payload[0] = uint8_t(ds.checkbytes);
-  Serial.println(String(payload[0]));
   for (int i = 1; i<7; i++){
     payload[i] = uint8_t(ds.mac[i-1]);
   }
@@ -72,5 +71,5 @@ void build_trame(uint8_t *payload){ //permet de fabriquer la trame
   payload[11]= uint8_t(ds.donneesbme);
   payload[12] = uint8_t(ds.tensionbattery);
   payload[13]=uint8_t(ds.checkbytes);
-  Serial.println(String(payload[13]));
+
 }

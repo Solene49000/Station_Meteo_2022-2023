@@ -5,9 +5,6 @@
 //Trame
 uint8_t payload[PAYLOAD_LEN];
 
-//Declaration des fonctions
-
-
 void setup() {
 
   pinMode(MEASURE, OUTPUT);
@@ -19,11 +16,10 @@ void setup() {
   Serial.begin(9600);
 }
 
-void debug_trame(){ //Fonction de debug de la trame
-   //Trame forme : I|macAdresse|pluvioanemometre|anemometre|girouette|donneestsl|donneesbme|checkbytes
+void debug_trame(uint8_t *payload){ //Fonction de debug de la trame
   
+  //Trame forme : I|macAdresse|pluvioanemometre|anemometre|girouette|donneestsl|donneesbme|checkbytes
   build_trame(payload);
-
   uint16_t pluviometre = payload[7];
   uint16_t anemometre = payload[8];
   uint16_t girouette = payload[9];
@@ -39,6 +35,6 @@ void debug_trame(){ //Fonction de debug de la trame
 
 void loop() {
   build_trame(payload);
-  debug_trame();
+  debug_trame(payload);
   lora_send_trame(payload);
 }
