@@ -124,4 +124,9 @@ SEANCE XI - 09 Décembre : Makefile
 
 SEANCE XII - 20 Décembre : LoRa
 -
-- Debut de mise en forme des données pour LoRa -> Tâche ardue
+- Début de mise en forme des données pour LoRa
+  - Recupération du code de l'année dernière
+  - Erreur lecture numéro MAC -> résolue
+  - Erreur ESP32 -> outil installé pour décoder les erreurs ESP32
+    - Déclaration de type dans la fonction build_trame incorrecte (uint_t -> void)
+   
