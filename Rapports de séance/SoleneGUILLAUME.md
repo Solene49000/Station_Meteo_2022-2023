@@ -124,3 +124,4 @@ SEANCE XI - 09 Décembre : Makefile
 
 SEANCE XII - 20 Décembre : LoRa
 -
+- Debut de mise en forme des données pour LoRa -> Tâche ardue
