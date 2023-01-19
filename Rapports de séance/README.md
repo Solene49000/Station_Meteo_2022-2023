@@ -1,3 +1,15 @@
+INTRODUCTION
+-
+Dans le cadre du projet de la ruche connectée, nous continuons le développement de la station météo.
+Celle ci permet  la mesure de données météorologiques telles que :
+- La quantité de pluie tombée (1 front montant par basculement du pluviomètre)
+- La vitesse du vent (1 front montant par tour d'anémomètre)
+- La direction du vent (Tension différente par direction)
+- La luminosité (I2C)
+- La température (I2C)
+- L'humidité (I2C)
+
+
 1 - LES PORTS
 -
 
