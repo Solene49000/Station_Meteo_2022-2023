@@ -16,34 +16,28 @@
 
 - Autres ports
   - MEASURE : 13 -- Mettre à high pour fournir une tension aux modules
-  - LED_R : 33 -- Led test du bon fonctionnement
-  - LED_G : 25 -- Led test du bon fonctionnement
+  - LED_R : 33 -- Led rouge de test du bon fonctionnement
+  - LED_G : 25 -- Led verte de test du bon fonctionnement
 
 
 2- LES FICHIERS
 -
-- Station_Météo : Demande à des fréquences régulières la restitution des données des modules
-- Girouette : Renvoie la direction du vent entre 0 et 15 ( 0 = Nord, 1 = Nord Nord Ouest, ...)
-- Anémomètre : Renvoie la vitesse du vent jusquà 250 km/h (float)
-- Pluviomètre : Renvoie la quantité d'eau tombée en 10s
-- LuxHumTemp : 
-  - Renvoie la luminosité
-  - REnvoie l'humidité
-  - Renvoie la température
-- LoRa trame envoyée toutes les 10s
-- Structure trame : 
+- Station_Météo.ino : Demande à des fréquences régulières la restitution des données des modules
+- Girouette.ino : Renvoie la direction du vent entre 0 et 15 ( 0 = Nord, 1 = Nord Nord Ouest, ...)
+- Anémomètre.ino : Renvoie la vitesse du vent jusquà 250 km/h (float)
+- Pluviomètre.ino : Renvoie la quantité d'eau tombée en 10s
+- LuxHumTemp.ino : 
+  - Renvoie la luminosité en lux
+  - Renvoie l'humidité en pourcentage
+  - Renvoie la température en degrés
+- ESP_LoRa_internal.ino : 
+  - Appelle 3 fonctions
+    - build_trame : écrit une trame avec les données brutes de nos mesures
+    - debug_trame : reformate la trame en binaire
+    - lora_send_trame : envoie la trame vers l'antenne
 
+3 - LES DETAILS
 
-BROUILLON
-struct datas_w { // 255 <=> error
-  uint8_t macSTA[6];
-  float   temp      = 225;        // -50 to +80 °C
-  uint8_t hygro     = 255;        //  0 to 100%
-  float   atm       = 0;          // 300 - 1100 hPa
-  uint8_t wind_s    = 255;         // km/h
-  uint8_t wind_d    = 255;         // step 2° - divided by 2 (0-180 =>0-360)
-  float   rain      = 0;
-  uint16_t lum      = 0;           // 40000 lux
-  float    v_bat      = 255;        // 0 to 16 V, sent in 1/10 de V
-  uint8_t  charg_bat  = 255;    // 0 to 100%
-} dw;
+- Une trame LoRa est envoyée toutes les 15 minutes
+- Structure trame :   I|macAdresse|pluviometre|anemometre|girouette|donneestsl|donneesbme|checkbytes
+
