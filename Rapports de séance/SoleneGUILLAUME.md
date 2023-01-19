@@ -6,9 +6,8 @@ Lots de cette séance, nous avons recu des explications sur le projet Ruche conn
 
 ### Ruche connectée #
 
-INSERER IMAGE SCHEMA RUCHE CONNECTEE
+
 La ruche connectée est divisé en plusieurs projets différents. <br/>Notre promo prend la suite de ce qui est existant.
-ENUMERER CE QUI EXISTE
 <br/> Trois grosses parties sont à créer ou bien à continuer.
 - La station météo (à continuer)
 - Lutte contre les parasites
