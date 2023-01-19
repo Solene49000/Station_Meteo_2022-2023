@@ -126,11 +126,13 @@ SEANCE XII - 20 Décembre : LoRa
 -
 - Début de mise en forme des données pour LoRa
   - Recupération du code de l'année dernière
-  - Erreur lecture numéro MAC -> résolue
+  - Erreur lecture numéro MAC -> résolue en trouvans une autre manière d'obtenir le numéro MAC de l'ESP32
   - Erreur ESP32 -> outil installé pour décoder les erreurs ESP32 : ESP Exception Decoder
+    - L'outil est utile pour les messages chiffrés de l'ESP32
+    - Relativement imprécis sur l'explication de l'erreur mais aide tout de même
    
 SEANCE XIII - 06 Janvier : LoRa
 -
-- Erreur ESP32 : Déclaration de type dans la fonction build_trame incorrecte (uint_t -> void)
-- On arrive à créer une trame LoRa
-- Problème d'initialisation de fréquence
+- Erreur ESP32 : Déclaration du type de la fonction build_trame incorrecte (uint_t -> void) dans le code de l'année dernière. Probleme résolu
+- Nous arrivons à créer une trame LoRa avec des valeurs prédéfinies
+- Nous avons un message d'erreur de problème d'initialisation de fréquence à régler lors de la prochaine séance
