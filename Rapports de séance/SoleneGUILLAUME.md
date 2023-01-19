@@ -130,7 +130,7 @@ SEANCE XII - 20 Décembre : LoRa
   - Erreur ESP32 -> outil installé pour décoder les erreurs ESP32 : ESP Exception Decoder
    
 SEANCE XIII - 06 Janvier : LoRa
-
+-
 - Erreur ESP32 : Déclaration de type dans la fonction build_trame incorrecte (uint_t -> void)
 - On arrive à créer une trame LoRa
 - Problème d'initialisation de fréquence
