@@ -37,7 +37,19 @@
     - lora_send_trame : envoie la trame vers l'antenne
 
 3 - LES DETAILS
-
+-
 - Une trame LoRa est envoyée toutes les 15 minutes
 - Structure trame :   I|macAdresse|pluviometre|anemometre|girouette|donneestsl|donneesbme|checkbytes
 
+4 - LE SET UP
+-
+- Télécharger Arduino IDE
+- Télécharger toutes les librairies affichées dans le fichier concerné
+- Paramétrer Arduino IDE pour accepter la carte ESP32 Dev Module
+- Copier le code issu de github : ouvrir le terminal de commande, allez dans votre répertoire du projet et entrez la fonction suivante "git copy https://github.com/Solene49000/Station_Meteo_2022-2023/tree/main/Codes"
+- Dans documents, ouvrir le fichier "Station_meteo.ino". Tous les fichiers du dossier s'ouvrent dans Arduino
+- Préparer le set up :
+  - Brancher le pluviomètre au connecteur P
+  - Brancher l'anémomètre et la girouette au connecteur G
+  - Brancher le câble USB à la carte Arduino et à votre PC
+- Compiler puis téléverser le code ( La compilation peut s'avérer très longue car Arduino n'est pas vraiment adapté à Windows et nous avons un certain nombre de fichiers)
