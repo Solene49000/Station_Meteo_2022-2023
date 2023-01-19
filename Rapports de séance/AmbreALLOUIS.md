@@ -103,3 +103,29 @@ Séance du 01/12/2022
   - Adafruit
   - ESP32 Time Interrupt
 - Création du répertoire bibliothèques. Ce repertoire contient, un fichier texte avec la liste de toutes les bibliothèques installées et les fonctions qui les utilisent et les répertoires ".zip" à inclurent dans arduino.
+
+Séance du 09/12/2022
+-
+
+- Finalisation du code capteur de lumière et capteur de pression, humidité et température
+- La fonction interrupt / timer de l'ESP32, retourne des erreurs et empêche la bonne lecture des résultats.
+  Le problème provient de la tension renvoyée par le système, elle est trop élevée.
+  Au final, on a choisi de ne pas faire appel à cette fonction parce que pour le code final, on va récupérer toutes les données en mêmes temps. Pour cela, cette fonction ne nous sera pas utile.
+- Mise en commun des codes et réalisation d'un main récupérant toutes les données à un interval de temps donné.
+
+
+Séance du 20/12/2022
+-
+
+- Travail sur le système de récupération des données avec une trame LoRa
+- LoRa : est un protocol réseau. Elle permet la modulation d'ondes radio et une transmission radio longue portée à bas débit. Cette technologie est la plus adaptée à notre système parce qu'on doit communiquer peu d'informations et peu souvent. Notre système est positionner à l'extérieur et doit communiquer avec une application située plus loin.
+- Lors de cette séance, j'ai mal compris une de nos discussion. J'ai travaillé sur une interface web qui receptionne la trame LoRa. Cependant, l'application que nous devons rejoindre est déjà existante. Au final, j'ai perdu le temps d'une séance pour le projet.  
+
+Séance du 09/01/2023
+-
+
+- Travail en binome sur la trame LoRa.
+- Le code fourni n'est pas compilable, séance de débuggage.
+- On relève un problème de fréquence pour la transmission.
+- L'initialisation de la fréquance n'est pas fonctionnelle.
+- La définition de type pour certaines fonctions était mal effectuée et provoquait des erreur : changement du type build en void.
