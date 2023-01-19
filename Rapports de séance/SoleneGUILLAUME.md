@@ -135,3 +135,10 @@ SEANCE XIII - 06 Janvier : LoRa
 - Erreur ESP32 : Déclaration du type de la fonction build_trame incorrecte (uint_t -> void) dans le code de l'année dernière. Probleme résolu
 - Nous arrivons à créer une trame LoRa avec des valeurs prédéfinies
 - Nous avons un message d'erreur de problème d'initialisation de fréquence à régler lors de la prochaine séance
+
+SEANCE XIV - 19 Janvier : Présentation des projets
+-
+- Apres la trame LoRa, nous devrons nous intéresser à consommer le minimum possible.
+  - Il nous faut mettre tous nos outils périphériques en sommeil ainsi que l'ESP32
+  - Le système se réveille toutes  les 15 minutes ou bien lorsque nous avons un front montant du pluviomètre
+- Le projet de batterie rechargeable par panneau solaire rencontre des difficultés en terme de conception de la carte
