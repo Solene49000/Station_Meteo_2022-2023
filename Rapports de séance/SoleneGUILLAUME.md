@@ -142,3 +142,11 @@ SEANCE XIV - 19 Janvier : Présentation des projets
   - Il nous faut mettre tous nos outils périphériques en sommeil ainsi que l'ESP32
   - Le système se réveille toutes  les 15 minutes ou bien lorsque nous avons un front montant du pluviomètre
 - Le projet de batterie rechargeable par panneau solaire rencontre des difficultés en terme de conception de la carte
+
+SEANCE IX - 10 fevrier : Low power modes
+-
+- Choix du mode low power :
+   - mode light sleep : plus de communication sans fil (Bluetooth, WiFi,...)
+   - mode deep sleep : plus de CPU, de communications sans fil ou de périphériques. Peut se réveiller par interruption ou après un temps donné
+   - mode hibernate : plus de mémoire mais on en a besoin pour mémoriser les valeurs de pluie
+- Nous choisissons finalement le mode deep sleep qui nous permet une connsommation amoindrie à 0,1mA au lieu de 60mA pour le mode actif.
