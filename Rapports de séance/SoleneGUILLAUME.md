@@ -150,3 +150,5 @@ SEANCE IX - 10 fevrier : Low power modes
    - mode deep sleep : plus de CPU, de communications sans fil ou de périphériques. Peut se réveiller par interruption ou après un temps donné
    - mode hibernate : plus de mémoire mais on en a besoin pour mémoriser les valeurs de pluie
 - Nous choisissons finalement le mode deep sleep qui nous permet une connsommation amoindrie à 0,1mA au lieu de 60mA pour le mode actif.
+- Lien pour avoir les codes pour passer en sleep : https://randomnerdtutorials.com/esp32-deep-sleep-arduino-ide-wake-up-sources/
+- Il nous faut ne pas modifier le temps avant reveil initial (15 min) si nous avons la pluie qui interrompt le sleep
