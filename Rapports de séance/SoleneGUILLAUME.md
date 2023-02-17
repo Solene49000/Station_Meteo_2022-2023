@@ -152,3 +152,11 @@ SEANCE IX - 10 fevrier : Low power modes
 - Nous choisissons finalement le mode deep sleep qui nous permet une connsommation amoindrie à 0,1mA au lieu de 60mA pour le mode actif.
 - Lien pour avoir les codes pour passer en sleep : https://randomnerdtutorials.com/esp32-deep-sleep-arduino-ide-wake-up-sources/
 - Il nous faut ne pas modifier le temps avant reveil initial (15 min) si nous avons la pluie qui interrompt le sleep
+
+SEANCE X - 17 fevrier
+-
+- Debug du ESP sleep : erreurs dues à l'activation de la pin measure
+  - Les peripheriques causent une chute de tension lors de leur alimentation 
+  - Premiere solution : une capa plus puissante pour compenser la chute de tension -> pas suffisant
+  - Deuxieme solution : alimentation 5V en externe a explorer a la prochaine seance  
+
