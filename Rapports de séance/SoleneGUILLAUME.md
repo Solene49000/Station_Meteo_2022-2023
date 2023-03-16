@@ -160,3 +160,11 @@ SEANCE X - 17 fevrier
   - Premiere solution : une capa plus puissante pour compenser la chute de tension -> pas suffisant
   - Deuxieme solution : alimentation 5V en externe a explorer a la prochaine seance  
 
+SEANCE XI - 16 Mars
+-
+- Debug du ESP Sleep
+   - Alimentation 5V externe -> L'ESP se réveille à chaque timer mais pas sous l'action du pluviometre
+   - Le pluviometre n'est plus alimenté via la pin measure lorsque l'esp passe en sleep
+   - Essais de pullup internes etc -> pas fonctionnels
+   - Changement de câblage : le pluviomètre est maintenant alimenté par VCC et non par V+ via R3
+   -  Prochaine seance : fusionner le code de passage en sleep avec tout le reste du code + ne pas perturber le timer si reveil par pluviometre.
