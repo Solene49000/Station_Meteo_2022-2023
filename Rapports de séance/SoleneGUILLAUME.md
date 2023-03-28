@@ -176,3 +176,7 @@ SEANCE XII - 23 Mars
  
 SEANCE XII - 28 Mars
 -
+- Ne pas perturber le timer si reveil par pluviometre :
+  - test de plusieurs possibilités non fonctionelles avant de constater que le delta time ne bouge pas
+  - Fonctionel en slight sleep mais on peut mieux faire
+  - prochaine seance : utiliser l'heure du systeme
