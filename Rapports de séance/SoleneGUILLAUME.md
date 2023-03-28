@@ -168,3 +168,11 @@ SEANCE XI - 16 Mars
    - Essais de pullup internes etc -> pas fonctionnels
    - Changement de câblage : le pluviomètre est maintenant alimenté par VCC et non par V+ via R3
    -  Prochaine seance : fusionner le code de passage en sleep avec tout le reste du code + ne pas perturber le timer si reveil par pluviometre.
+
+SEANCE XII - 23 Mars
+-
+- Tests passage en sleep mode sans perturber le reveil toutes les 25 secondes par l'action du pluviomètre.
+  - partie à developper à la prochaine séance.
+ 
+SEANCE XII - 28 Mars
+-
