@@ -2,10 +2,7 @@
 //AMBRE ALLOUIS - SOLENE GUILLAUME
 //ANNEE 2022-2023
 
-//#include "donnees.h"
-//#include "definition.h"
-
-void Anemo(){
+void Anemometre(){
   //3.6 pour passer de m/s en km/h
   vitesseVent = ((PI*RAYON*2*tourAnemo)/period_A)*3.6*1000 ;
   Serial.print("Vitesse du vent : ") ;

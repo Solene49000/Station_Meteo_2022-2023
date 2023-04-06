@@ -1,5 +1,6 @@
-// Copyright (c) Sandeep Mistry. All rights reserved.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+//PROJET STATION METEO
+//AMBRE ALLOUIS - SOLENE GUILLAUME
+//ANNEE 2022-2023
 
 #ifndef LORA_H
 #define LORA_H
@@ -9,22 +10,22 @@
 
 #if defined(ARDUINO_SAMD_MKRWAN1300)
 #define LORA_DEFAULT_SPI           SPI1
-#define LORA_DEFAULT_SPI_FREQUENCY 200000
-#define LORA_DEFAULT_SS_PIN        LORA_IRQ_DUMB
-#define LORA_DEFAULT_RESET_PIN     -1
-#define LORA_DEFAULT_DIO0_PIN      -1
+  #define LORA_DEFAULT_SPI_FREQUENCY 200000
+  #define LORA_DEFAULT_SS_PIN        LORA_IRQ_DUMB
+  #define LORA_DEFAULT_RESET_PIN     -1
+  #define LORA_DEFAULT_DIO0_PIN      -1
 #elif defined(ARDUINO_SAMD_MKRWAN1310)
-#define LORA_DEFAULT_SPI           SPI1
-#define LORA_DEFAULT_SPI_FREQUENCY 200000
-#define LORA_DEFAULT_SS_PIN        LORA_IRQ_DUMB
-#define LORA_DEFAULT_RESET_PIN     -1
-#define LORA_DEFAULT_DIO0_PIN      LORA_IRQ
+  #define LORA_DEFAULT_SPI           SPI1
+  #define LORA_DEFAULT_SPI_FREQUENCY 200000
+  #define LORA_DEFAULT_SS_PIN        LORA_IRQ_DUMB
+  #define LORA_DEFAULT_RESET_PIN     -1
+  #define LORA_DEFAULT_DIO0_PIN      LORA_IRQ
 #else
-#define LORA_DEFAULT_SPI           SPI
-#define LORA_DEFAULT_SPI_FREQUENCY 8E6 
-#define LORA_DEFAULT_SS_PIN        10
-#define LORA_DEFAULT_RESET_PIN     9
-#define LORA_DEFAULT_DIO0_PIN      2
+  #define LORA_DEFAULT_SPI           SPI
+  #define LORA_DEFAULT_SPI_FREQUENCY 8E6 
+  #define LORA_DEFAULT_SS_PIN        10
+  #define LORA_DEFAULT_RESET_PIN     9
+  #define LORA_DEFAULT_DIO0_PIN      2
 #endif
 
 #define PA_OUTPUT_RFO_PIN          0

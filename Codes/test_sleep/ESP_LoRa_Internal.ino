@@ -2,7 +2,7 @@
 //#include "donnees.h"
 //#include "esp_lora.h"
 
-//Trame
+// *** Trame ************************ //
 uint8_t payload[PAYLOAD_LEN];
 
 void LoRa_Envoi() {

@@ -2,11 +2,8 @@
 //AMBRE ALLOUIS - SOLENE GUILLAUME
 //ANNEE 2022-2023
 
-//#include "donnees.h"
-//#include "definition.h"
-
-void girouette() {
-  
+// Méthode permettant l'affichage de la direction du vent ************************ //
+void Girouette() {
   int sensorValue = analogRead(GIROUETTE);
   int directionVent;
   if (sensorValue > 3216 && sensorValue <= 3600 )
@@ -73,6 +70,7 @@ void girouette() {
   {
     directionVent = 5; // Sud Est Est
   }
+  Serial.print("Girouette : ");
+  Serial.println(directionVent);
   ds.donnees_girouette = static_cast<double>(directionVent);
-
 }
