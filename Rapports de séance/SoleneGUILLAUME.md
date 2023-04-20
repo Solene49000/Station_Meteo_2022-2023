@@ -180,3 +180,16 @@ SEANCE XII - 28 Mars
   - test de plusieurs possibilités non fonctionelles avant de constater que le delta time ne bouge pas
   - Fonctionel en slight sleep mais on peut mieux faire
   - prochaine seance : utiliser l'heure du systeme
+
+SEANCE XII - ??
+-
+- Le timer fonctionne même apres deux ou trois bascules
+
+SEANCE XIV - 20 Avril
+-
+- Le deep sleep ne fonctionne pas : "Guru panic'ed"
+  - Erreur peut etre sur l'ordre : on appelle l'envoi LoRa avant l'initialisation de LoRa
+- Réecriture du code dans le setup() pour ne pas appeler l'initialisation de LoRa quans reveil par le pluviometre.
+- En réglant ces problèmes, nous n'arrivons maintenant plus à récupérer les données ni à gérer correctement le réveil du timer 
+- 
+- 
