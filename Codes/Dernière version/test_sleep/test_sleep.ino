@@ -46,14 +46,14 @@ RTC_DATA_ATTR time_t timePassed = time(NULL);
 RTC_DATA_ATTR time_t time_now = time(NULL);
 RTC_DATA_ATTR int nb_bascules = 0;
 
-float temperature = 0.0;
-float pression = 0.0;
-float humidite = 0.0;
-float luminosite = 0.0;
-float vitesseVent;
+RTC_DATA_ATTR float temperature = 0.0;
+RTC_DATA_ATTR float pression = 0.0;
+RTC_DATA_ATTR float humidite = 0.0;
+RTC_DATA_ATTR float luminosite = 0.0;
+RTC_DATA_ATTR float vitesseVent;
 
-int tourAnemo=0 ;
-const unsigned long period_A = 10000;
+RTC_DATA_ATTR int tourAnemo=0 ;
+RTC_DATA_ATTR const unsigned long period_A = 10000;
 
 // *** Méthode prenant en compte les diféérents types de réveil ************** //
 void wakeup_case(){
@@ -67,9 +67,15 @@ void wakeup_case(){
       Serial.println("Nombre de bascules : ");
       Serial.println(nb_bascules);
       time_now = time(NULL);
+      Serial.print("time_now : ");
+      Serial.println(time_now);
+        Serial.print("lastTimeDataSent : ");
+        Serial.println(lastTimeDataSent);
       timePassed = time_now-lastTimeDataSent;
       if ( time_t(temps_interrupt) > timePassed )
-        temps_interrupt -= timePassed * uS_TO_S_FACTOR;
+        Serial.print("timePassed : ");
+        Serial.println(timePassed);
+        temps_interrupt = temps_interrupt - timePassed * uS_TO_S_FACTOR;
         Serial.print("Temps actuel : ");
         Serial.println(time_now);
         Serial.print("Temps écoulé : ");
@@ -78,15 +84,24 @@ void wakeup_case(){
         Serial.println(temps_interrupt);
     break;
     case ESP_SLEEP_WAKEUP_TIMER :
-      lastTimeDataSent = time(NULL);
       temps_interrupt = TIME_TO_SLEEP * uS_TO_S_FACTOR;
       Serial.println("Réveil causé par le timer"); 
       Serial.print("Nombre de bascules au bout de ");
-      Serial.print(TIME_TO_SLEEP * uS_TO_S_FACTOR);
+      Serial.print(TIME_TO_SLEEP);
       Serial.print("s : "); 
       Serial.println(nb_bascules);
-      nb_bascules = 0;
+
+      bme.begin(0x76);
+      tsl.begin(0x76);
+      tsl.setGain(TSL2591_GAIN_MED); 
+      tsl.setTiming(TSL2591_INTEGRATIONTIME_300MS);
+      attachInterrupt(ANEMOMETRE,comptageAnemo,FALLING) ;
+//    LoRa
+      SPI.begin(SCK, MISO, MOSI);
+      LoRa.setPins(SS, RST, DI0);
       lecture_donnee();
+      nb_bascules = 0;
+      lastTimeDataSent = time(NULL);
     break;
     default : 
       Serial.print("Réveil causé par le deep sleep: ");
@@ -104,6 +119,9 @@ void setup(){
   Serial.print("Boot number: ");
   Serial.println(String(bootCount));
   temps_interrupt = TIME_TO_SLEEP * uS_TO_S_FACTOR * CONVERT_MINUTE;
+  // *** SUPPLY ON ************************************ //
+  pinMode(MEASURE, OUTPUT);
+  digitalWrite(MEASURE, HIGH);
   // Affichage de la cause du réveil
   wakeup_case();
   
@@ -113,9 +131,6 @@ void setup(){
   Serial.print("Reveil de l'ESP32 toutes les ");
   Serial.print(String(TIME_TO_SLEEP));
   Serial.println(" secondes ou quand il pleut.");
-  // *** SUPPLY ON ************************************ //
-  pinMode(MEASURE, OUTPUT);
-  digitalWrite(MEASURE, HIGH);
   // *** PIN DEFINITION ******************************* //
   pinMode (LED_R, OUTPUT);
   pinMode (LED_G, OUTPUT);
@@ -123,26 +138,14 @@ void setup(){
   pinMode (PLUVIOMETRE, INPUT_PULLUP);
   pinMode (GIROUETTE, INPUT);
 
-  bme.begin(0x76);
-  tsl.begin(0x76);
-  tsl.setGain(TSL2591_GAIN_MED); 
-  tsl.setTiming(TSL2591_INTEGRATIONTIME_300MS);
-  // LoRa
-  SPI.begin(SCK, MISO, MOSI);
-  LoRa.setPins(SS, RST, DI0);
   Serial.println("Going to sleep now");
   delay(1000);
-  Serial.flush(); 
+  Serial.flush();
   esp_deep_sleep_start();
-  setup();
-  Serial.println("This will never be printed");
 }
 
 void lecture_donnee() {
   digitalWrite(LED_G, HIGH);
-  delay(100);
-  digitalWrite(LED_G, LOW);
-  delay(100);
   Girouette();
   Pluviometre(nb_bascules);
   //LuxHumTemp
@@ -150,8 +153,8 @@ void lecture_donnee() {
   PrintValuesSerial();
   Anemometre();
   Batterie();
-  //LoRa
   LoRa_Envoi();
+  digitalWrite(LED_G, LOW);
 }
 
 void loop(){

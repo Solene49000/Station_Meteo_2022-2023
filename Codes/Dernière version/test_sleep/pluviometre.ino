@@ -3,7 +3,7 @@
 //ANNEE 2022-2023
 
 #define QUANTITE_EAU_PAR_BASCULE 0.2794 //en mm
-
+//int nb_bacules
 float Pluviometre (int nb_bacules){
   float quantite_eau;
   quantite_eau = QUANTITE_EAU_PAR_BASCULE * nb_bacules;

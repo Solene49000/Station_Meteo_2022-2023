@@ -4,6 +4,7 @@
 
 void Anemometre(){
   //3.6 pour passer de m/s en km/h
+  delay(period_A); 
   vitesseVent = ((PI*RAYON*2*tourAnemo)/period_A)*3.6*1000 ;
   Serial.print("Vitesse du vent : ") ;
   Serial.print(String(vitesseVent, 2)) ;
