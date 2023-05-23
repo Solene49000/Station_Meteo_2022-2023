@@ -51,7 +51,7 @@ Celle ci permet  la mesure de données météorologiques telles que :
 3 - LES DETAILS
 -
 - Une trame LoRa est envoyée toutes les 15 minutes
-- Structure trame :   I|macAdresse|pluviometre|anemometre|girouette|donneestsl|donneesbme|checkbytes
+- Structure trame :   I|macAdresse|pluviomètre|anémomètre|girouette|partie_1_pression|partie_2_pression|humidité|luminosité|température|batterie|checkbytes
 
 4 - LE SET UP
 -
