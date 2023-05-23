@@ -8,7 +8,7 @@ Celle ci permet  la mesure de données météorologiques telles que :
 - La luminosité (I2C)
 - La température (I2C)
 - L'humidité (I2C)
-
+Le code final est situé dans le repertoire : codes/
 
 1 - LES PORTS
 -
@@ -34,10 +34,10 @@ Celle ci permet  la mesure de données météorologiques telles que :
 
 2- LES FICHIERS
 -
-- Station_Météo.ino : Demande à des fréquences régulières la restitution des données des modules
+- test_sleep.ino : Demande à des fréquences régulières la restitution des données des modules et envoie la trame LoRa
 - Girouette.ino : Renvoie la direction du vent entre 0 et 15 ( 0 = Nord, 1 = Nord Nord Ouest, ...)
-- Anémomètre.ino : Renvoie la vitesse du vent jusquà 250 km/h (float)
-- Pluviomètre.ino : Renvoie la quantité d'eau tombée en 10s
+- Anemometre.ino : Renvoie la vitesse du vent jusquà 250 km/h (float)
+- Pluviometre.ino : Renvoie la quantité d'eau tombée en 10s
 - LuxHumTemp.ino : 
   - Renvoie la luminosité en lux
   - Renvoie l'humidité en pourcentage
@@ -47,7 +47,8 @@ Celle ci permet  la mesure de données météorologiques telles que :
     - build_trame : écrit une trame avec les données brutes de nos mesures
     - debug_trame : reformate la trame en binaire
     - lora_send_trame : envoie la trame vers l'antenne
-
+- Batterie.ino : Renvoie la tension de la batterie
+ 
 3 - LES DETAILS
 -
 - Une trame LoRa est envoyée toutes les 15 minutes
