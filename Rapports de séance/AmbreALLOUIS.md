@@ -129,3 +129,24 @@ Séance du 09/01/2023
 - On relève un problème de fréquence pour la transmission.
 - L'initialisation de la fréquance n'est pas fonctionnelle.
 - La définition de type pour certaines fonctions était mal effectuée et provoquait des erreur : changement du type build en void.
+
+Séance du 19/01/2023
+-
+
+Séance du 10/02/2023
+-
+
+Séance du 17/02/2023
+-
+
+Séance du 16/03/2023
+-
+
+Séance du 23/03/2023
+-
+
+Séance du 28/03/2023
+-
+
+Séance du 20/04/2023
+-
