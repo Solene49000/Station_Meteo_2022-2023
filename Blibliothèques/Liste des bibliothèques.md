@@ -9,7 +9,7 @@
 | Adafruit_TSL2591.h        | test_sleep.ino | Adafruit TSL2591 Library            |
 | Adafruit_BusIO_Register.h | test_sleep.ino | Adafruit BusIO                      |
 | Adafruit_I2CDevice.h      | test_sleep.ino | Adafruit BusIO                      |
-| Adafruit_I2CRegister.h    | test_sleep.ino | Adafruit BusIO                      |
+| Adafruit_I2CRegister.h    | test_sleep.ino | Adafruit AM2320 sensor library      |
 | Adafruit_SPIDevice.h      | test_sleep.ino | Adafruit BusIO                      |
 | Arduino.h                 | LoRa.h         | Arduino                             |
 | SPI.h                     | LoRa.h         | SPI                                 |
