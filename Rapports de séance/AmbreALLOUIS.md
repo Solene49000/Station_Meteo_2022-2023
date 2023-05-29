@@ -133,8 +133,16 @@ Séance du 06/01/2023
 Séance du 19/01/2023
 -
 
+- Présentation de notre avancée sur le projet
+- Nous devons inclure dans notre code :
+  - Lecture de la tension de le batterie et l'ajouter dans la trame LoRa
+  - Ajouter un système de réveil. Celui-ci enverrai une fois réveillé toutes les données avec la trame LoRa et endormi compte le nombre de bascules du pluviomètre. 
+
 Séance du 10/02/2023
 -
+
+- Choix du mode deep sleep car il consomme peu et il peut enregistrer des données même pendant sa phase endormie. 
+- Le système est réveillé par toutes les interruptions.
 
 Séance du 17/02/2023
 -
@@ -145,11 +153,21 @@ Séance du 16/03/2023
 Séance du 23/03/2023
 -
 
+- Ajout dans le code du sleep mode.
+- Objectif : ne pas reveiller le systeme avec les bascules du pluviomètre.
+
 Séance du 28/03/2023
 -
 
+- Utilisation du deep sleep, le microcontroleur, ne détecte pas les bascules.
+- Test du slight sleep, fonctionne très bien, on arrive à récuperer le nombre de bascules. Mais le problème est que ce système consomme beaucoup trop.
+- On bascule donc sur le deep sleep, le problème viendrait du code, il serait appelé au mauvais endroit.
+
 Séance du 06/04/2023
 -
+
+- Comparaison entre l'heure du actuelle et l'heure de l'interruption pour compter les bascules.
+- Fonctionnement du timer.
 
 Séance du 20/04/2023
 -
@@ -160,4 +178,5 @@ Séance du 20/04/2023
 
 Séance du 27/04/2023
 -
+
 Présentation du projet
