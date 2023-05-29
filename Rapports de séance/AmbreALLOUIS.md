@@ -121,7 +121,7 @@ Séance du 20/12/2022
 - LoRa : est un protocol réseau. Elle permet la modulation d'ondes radio et une transmission radio longue portée à bas débit. Cette technologie est la plus adaptée à notre système parce qu'on doit communiquer peu d'informations et peu souvent. Notre système est positionner à l'extérieur et doit communiquer avec une application située plus loin.
 - Lors de cette séance, j'ai mal compris une de nos discussion. J'ai travaillé sur une interface web qui receptionne la trame LoRa. Cependant, l'application que nous devons rejoindre est déjà existante. Au final, j'ai perdu le temps d'une séance pour le projet.  
 
-Séance du 09/01/2023
+Séance du 06/01/2023
 -
 
 - Travail en binome sur la trame LoRa.
@@ -148,5 +148,16 @@ Séance du 23/03/2023
 Séance du 28/03/2023
 -
 
+Séance du 06/04/2023
+-
+
 Séance du 20/04/2023
 -
+
+- Préparation du support de présentation
+- On relève un problème lors du réveil du pluviomètre. Le deep sleep aurait un problème d'initialisation. Lors de la première mise en veille avant la première phase de réveil du système. Le deep sleep remonte bien le nombre de bascules du pluviomètre. Lors du premier réveil, la trame LoRa est bien transmise. Après commence la deuxième phase de mise en veille et là nous rencontrons un problème avec le temps de réveil. Ce problème provoque des bascules systématiques du pluviomètre.
+- Nous avons remarqué que le temps d'interruption correspond toujours à celui de la première phase.
+
+Séance du 27/04/2023
+-
+Présentation du projet
