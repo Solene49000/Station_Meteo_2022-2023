@@ -9,7 +9,7 @@ Celle ci permet  la mesure de données météorologiques telles que :
 - La température (I2C)
 - L'humidité (I2C)
 
-Le code final est situé dans le repertoire : Codes/Dernière Version/test_sleep
+Le code final est situé dans le repertoire : Codes/Dernière version/test_sleep
 
 1 - LES PORTS
 -
