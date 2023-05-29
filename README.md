@@ -9,7 +9,7 @@ Celle ci permet  la mesure de données météorologiques telles que :
 - La température (I2C)
 - L'humidité (I2C)
 
-Le code final est situé dans le repertoire : [Codes/Dernière version/test_sleep](https://github.com/Solene49000/Station_Meteo_2022-2023/Codes/Dernière version/test_sleep)
+Le code final nommé **test_sleep** est situé dans le repertoire : *Codes/Dernière version* : [https://github.com/Solene49000/Station_Meteo_2022-2023/Codes/"Dernière version"/test_sleep]
 
 1 - LES PORTS
 -
