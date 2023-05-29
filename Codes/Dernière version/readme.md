@@ -22,3 +22,6 @@ Fichiers C
 Fichiers d'en-tete
 --
 - **LoRa.h**
+- **definition.h**
+- **donnees.h**
+- **esp_lora.h**
